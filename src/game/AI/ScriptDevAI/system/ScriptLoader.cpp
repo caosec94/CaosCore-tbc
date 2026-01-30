@@ -8,6 +8,8 @@
 extern void AddSC_battleground();
 
 // custom
+extern void AddSC_npc_dual_spec();
+
 
 // examples
 extern void AddSC_example_creature();
@@ -372,7 +374,8 @@ void AddScripts()
     // battlegrounds
     AddSC_battleground();
 
-    // custom
+    // custom 
+    AddSC_npc_dual_spec();
 
     // examples
     AddSC_example_creature();
