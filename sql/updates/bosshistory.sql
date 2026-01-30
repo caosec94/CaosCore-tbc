@@ -14,3 +14,10 @@ CREATE TABLE IF NOT EXISTS `boss_history` (
   `MapMaxPlayers` tinyint(3) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`Guid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+REPLACE INTO `db_script_string` (`entry`, `content_default`) VALUES
+(11006, '|Cffff0000[RAID INFO] |cff00ffff%s %uN: |Cff00ff00%s |cff00ffffderrotado por la hermandad |Cff00ff00%s|cff00ffff. Jugadores: %u/%u Tiempo: %um %us'),
+(11007, '|Cffff0000[RAID INFO] |cff00ffff%s %uH: |Cff00ff00%s |cff00ffffderrotado por la hermandad |Cff00ff00%s|cff00ffff. Jugadores: %u/%u Tiempo: %um %us');
+
