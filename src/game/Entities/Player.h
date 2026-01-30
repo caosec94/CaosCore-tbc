@@ -113,28 +113,6 @@ enum PlayerSpellState
     PLAYERSPELL_REMOVED         = 3
 };
 
-// --- INICIO ADAPTACIÓN TRANSMOG ---
-public:
-    // Mapa para almacenar la transfiguración en memoria: <Slot, EntryVisual>
-    std::map<uint8, uint32> m_transmogMap;
-
-    // Carga las transfiguraciones desde la base de datos al loguear
-    void LoadTransmogFromDB();
-
-    // Devuelve el Entry visual si el slot está transfigurado, de lo contrario el real
-    uint32 GetVisualItemEntry(uint8 slot, uint32 realEntry) const
-    {
-        auto it = m_transmogMap.find(slot);
-        if (it != m_transmogMap.end())
-            return it->second;
-        return realEntry;
-    }
-
-    // Sobrecarga o modificación de la función de visibilidad
-    void SetVisibleItem(uint8 slot, uint32 itemEntry); 
-// --- FIN ADAPTACIÓN TRANSMOG ---
-
-
 struct PlayerSpell
 {
     PlayerSpellState state : 8;
